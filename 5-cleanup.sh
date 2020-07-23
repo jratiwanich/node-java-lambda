@@ -15,7 +15,7 @@ if [ -f bucket-name.txt ]; then
         echo "Bucket was not created by this application. Skipping."
     else
         while true; do
-            read -p "Delete deployment artifacts and bucket ($ARTIFACT_BUCKET)? (y/n)" response
+            read -p "Delete deployment artifacts and S3 bucket ($ARTIFACT_BUCKET)? (y/n)" response
             case $response in
                 [Yy]* ) aws s3 rb --force s3://$ARTIFACT_BUCKET; rm bucket-name.txt; break;;
                 [Nn]* ) break;;
@@ -35,4 +35,4 @@ while true; do
 done
 
 rm -f output-s3.yml output.json
-rm -rf build .gradle target
+rm -rf build .gradle target bin
