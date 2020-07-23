@@ -1,6 +1,6 @@
 # Blank function (Java)
 
-![Architecture](/sample-apps/blank-java/images/sample-blank-java.png)
+![Architecture](https://github.com/awsdocs/aws-lambda-developer-guide/blob/master/sample-apps/blank-java/images/sample-blank-java.png)
 
 The project source includes function code and supporting resources:
 
@@ -20,11 +20,6 @@ Use the following instructions to deploy the sample application.
 - [The AWS CLI v1](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html).
 
 # Setup
-Download or clone this repository.
-
-    $ git clone https://github.com/awsdocs/aws-lambda-developer-guide.git
-    $ cd aws-lambda-developer-guide/sample-apps/blank-java
-
 To create a new bucket for deployment artifacts, run `1-create-bucket.sh`.
 
     blank-java$ ./1-create-bucket.sh
@@ -68,19 +63,6 @@ Let the script invoke the function a few times and then press `CRTL+C` to exit.
 
 The application uses AWS X-Ray to trace requests. Open the [X-Ray console](https://console.aws.amazon.com/xray/home#/service-map) to view the service map.
 
-![Service Map](/sample-apps/blank-java/images/blank-java-servicemap.png)
-
-Choose a node in the main function graph. Then choose **View traces** to see a list of traces. Choose any trace to view a timeline that breaks down the work done by the function.
-
-![Trace](/sample-apps/blank-java/images/blank-java-trace.png)
-
-Finally, view the application in the Lambda console.
-
-*To view the application*
-1. Open the [applications page](https://console.aws.amazon.com/lambda/home#/applications) in the Lambda console.
-2. Choose **blank-java**.
-
-  ![Application](/sample-apps/blank-java/images/blank-java-application.png)
 
 # Cleanup
 To delete the application, run `5-cleanup.sh`.
