@@ -1,0 +1,14 @@
+{
+  "name": "node-caller",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:aws": "node -e \"(async ()=> console.log(await require('./index').handler({'id':'12344-99988'})))();\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.719.0"
+  }
+}
