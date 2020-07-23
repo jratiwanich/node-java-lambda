@@ -1,3 +1,5 @@
+## Lambda test application calling from NodeJS to Java
+
 # Blank function (Java)
 
 ![Architecture](https://github.com/awsdocs/aws-lambda-developer-guide/blob/master/sample-apps/blank-java/images/sample-blank-java.png)
