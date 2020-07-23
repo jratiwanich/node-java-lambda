@@ -1,5 +1,28 @@
 #!/bin/bash
 set -eo pipefail
+
+
+while true; do
+    read -p "Delete output files? (y/n)" response
+    case $response in
+        [Yy]* ) rm -f output-s3.yml output.json; break;;
+        [Nn]* ) break;;
+        * ) echo "Response must start with y or n.";;
+    esac
+done
+echo "Deleted files: output-s3.yml output.json"
+
+while true; do
+    read -p "Delete build folders? (y/n)" response
+    case $response in
+        [Yy]* ) rm -rf build .gradle target bin node-caller/node_modules; break;;
+        [Nn]* ) break;;
+        * ) echo "Response must start with y or n.";;
+    esac
+done
+echo "Deleted folders: build .gradle target bin node-caller/node_modules"
+
+
 STACK=java-test-lambda
 if [[ $# -eq 1 ]] ; then
     STACK=$1
@@ -34,5 +57,3 @@ while true; do
     esac
 done
 
-rm -f output-s3.yml output.json
-rm -rf build .gradle target bin
