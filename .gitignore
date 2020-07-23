@@ -2,8 +2,8 @@
 
 # compiled output
 /dist
-/dist-server
-/tmp
+/build
+/bin
 /out-tsc
 
 # dependencies
@@ -41,3 +41,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# App files
+bucket-name.txt
+output-s3.yml 
+output.json

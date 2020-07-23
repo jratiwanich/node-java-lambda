@@ -12,5 +12,5 @@ then
 else
   gradle build -i
 fi
-aws cloudformation package --template-file $TEMPLATE --s3-bucket $ARTIFACT_BUCKET --output-template-file out.yml
-aws cloudformation deploy --template-file out.yml --stack-name java-test-lambda --capabilities CAPABILITY_NAMED_IAM
+aws cloudformation package --template-file $TEMPLATE --s3-bucket $ARTIFACT_BUCKET --output-template-file output-s3.yml
+aws cloudformation deploy --template-file output-s3.yml --stack-name java-test-lambda --capabilities CAPABILITY_NAMED_IAM

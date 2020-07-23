@@ -34,5 +34,5 @@ while true; do
     esac
 done
 
-rm -f out.yml out.json
+rm -f output-s3.yml output.json
 rm -rf build .gradle target
