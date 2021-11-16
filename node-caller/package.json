@@ -9,6 +9,6 @@
   "author": "Jak Ratiwanich",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.719.0"
+    "aws-sdk": "^2.814.0"
   }
 }
